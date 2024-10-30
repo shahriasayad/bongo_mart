@@ -1,3 +1,4 @@
+import 'package:bongo_mart/features/authentication/controllers.onboarding/onboarding_controller.dart';
 import 'package:bongo_mart/utils/constants/colors.dart';
 import 'package:bongo_mart/utils/constants/sizes.dart';
 import 'package:bongo_mart/utils/device/device_utility.dart';
@@ -17,7 +18,7 @@ class OnBoardingNextButton extends StatelessWidget {
       right: TSizes.defaultSpace,
       bottom: TDeviceUtils.getBottomNavigationBarHeight(),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () => OnBoardingController.instance.nextPage(),
         style: ElevatedButton.styleFrom(
             shape: const CircleBorder(),
             backgroundColor: dark ? TColors.buttonPrimary : Colors.black),
