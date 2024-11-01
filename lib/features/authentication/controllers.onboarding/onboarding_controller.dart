@@ -1,3 +1,4 @@
+import 'package:bongo_mart/features/authentication/screens/login/login.dart';
 import 'package:bongo_mart/utils/local_storage/storage_utility.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
@@ -18,7 +19,7 @@ class OnBoardingController extends GetxController {
 
   void nextPage() {
     if (currentPageIndex.value == 2) {
-      // Get.to(LoginScreen());
+      Get.offAll(const LoginScreen());
     } else {
       int page = currentPageIndex.value + 1;
       pageController.jumpToPage(page);
