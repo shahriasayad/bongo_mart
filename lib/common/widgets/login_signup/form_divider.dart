@@ -1,19 +1,16 @@
 import 'package:bongo_mart/utils/constants/colors.dart';
-import 'package:bongo_mart/utils/constants/text_strings.dart';
+import 'package:bongo_mart/utils/helpers/helper_functions.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_utils/src/extensions/export.dart';
 
 class TFormDivider extends StatelessWidget {
-  const TFormDivider({
-    super.key,
-    required this.dark,
-  });
+  const TFormDivider({super.key, required this.dividerText});
 
-  final bool dark;
+  final String dividerText;
 
   @override
   Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -24,7 +21,7 @@ class TFormDivider extends StatelessWidget {
               indent: 60,
               endIndent: 5),
         ),
-        Text(TTexts.orSignInWith.capitalize!,
+        Text(dividerText,
             style: Theme.of(context).textTheme.labelMedium),
         Flexible(
           child: Divider(
