@@ -1,14 +1,17 @@
+import 'package:bongo_mart/features/authentication/screens/signup/verify_email.dart';
 import 'package:bongo_mart/features/authentication/screens/signup/widgets/terms_and_condition_checkbox.dart';
 import 'package:bongo_mart/utils/constants/sizes.dart';
 import 'package:bongo_mart/utils/constants/text_strings.dart';
 import 'package:bongo_mart/utils/helpers/helper_functions.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class TSignupForm extends StatelessWidget {
   const TSignupForm({
-    super.key,});
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -48,15 +51,13 @@ class TSignupForm extends StatelessWidget {
           TextFormField(
             expands: false,
             decoration: const InputDecoration(
-                labelText: TTexts.email,
-                prefixIcon: Icon(Iconsax.direct)),
+                labelText: TTexts.email, prefixIcon: Icon(Iconsax.direct)),
           ),
           const SizedBox(height: TSizes.spaceBtwInputFields),
           TextFormField(
             expands: false,
             decoration: const InputDecoration(
-                labelText: TTexts.phoneNo,
-                prefixIcon: Icon(Iconsax.call)),
+                labelText: TTexts.phoneNo, prefixIcon: Icon(Iconsax.call)),
           ),
           const SizedBox(height: TSizes.spaceBtwInputFields),
           TextFormField(
@@ -73,7 +74,7 @@ class TSignupForm extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () => Get.to(() => const VerifyEmailScreen()),
               child: const Text(TTexts.createAccount),
             ),
           ),
