@@ -1,3 +1,5 @@
+import 'package:bongo_mart/features/authentication/password_configaration/forget_password.dart';
+import 'package:bongo_mart/features/authentication/screens/login/login.dart';
 import 'package:bongo_mart/features/authentication/screens/onboarding/onboarding.dart';
 import 'package:bongo_mart/features/authentication/screens/signup/signup.dart';
 import 'package:bongo_mart/utils/theme/theme.dart';
@@ -15,7 +17,7 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
-      home: const VerifyEmailScreen(),
+      home: const LoginScreen(),
     );
   }
 }
