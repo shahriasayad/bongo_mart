@@ -1,11 +1,8 @@
-import 'package:bongo_mart/features/authentication/password_configaration/forget_password.dart';
-import 'package:bongo_mart/features/authentication/screens/login/login.dart';
 import 'package:bongo_mart/features/authentication/screens/onboarding/onboarding.dart';
-import 'package:bongo_mart/features/authentication/screens/signup/signup.dart';
 import 'package:bongo_mart/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'features/authentication/screens/signup/verify_email.dart';
+import 'features/authentication/password_configaration/reset_password.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -17,7 +14,7 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
-      home: const LoginScreen(),
+      home: const ResetPassword(),
     );
   }
 }
