@@ -1,6 +1,7 @@
 import 'package:bongo_mart/features/authentication/password_configaration/reset_password.dart';
 import 'package:bongo_mart/utils/constants/sizes.dart';
 import 'package:bongo_mart/utils/constants/text_strings.dart';
+import 'package:bongo_mart/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -10,8 +11,16 @@ class ForgetPassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final isDark = THelperFunctions.isDarkMode(context);
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        leading: Icon(
+          Icons.arrow_back_outlined,
+          color: isDark ? Colors.white : Colors.black,
+        ),
+      ),
       body: Padding(
         padding: EdgeInsets.all(TSizes.defaultSpace),
         child: Column(

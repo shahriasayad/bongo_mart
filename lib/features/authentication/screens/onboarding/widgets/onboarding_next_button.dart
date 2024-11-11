@@ -1,5 +1,4 @@
 import 'package:bongo_mart/features/authentication/controllers.onboarding/onboarding_controller.dart';
-import 'package:bongo_mart/utils/constants/colors.dart';
 import 'package:bongo_mart/utils/constants/sizes.dart';
 import 'package:bongo_mart/utils/device/device_utility.dart';
 import 'package:bongo_mart/utils/helpers/helper_functions.dart';
