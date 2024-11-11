@@ -1,4 +1,3 @@
-import 'package:bongo_mart/app.dart';
 import 'package:bongo_mart/features/authentication/password_configaration/reset_password.dart';
 import 'package:bongo_mart/utils/constants/sizes.dart';
 import 'package:bongo_mart/utils/constants/text_strings.dart';

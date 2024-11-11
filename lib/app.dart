@@ -1,8 +1,10 @@
+import 'package:bongo_mart/features/authentication/password_configaration/reset_password.dart';
 import 'package:bongo_mart/features/authentication/screens/onboarding/onboarding.dart';
+// import 'package:bongo_mart/navigation_menu.dart';
+import 'package:bongo_mart/utils/constants/text_strings.dart';
 import 'package:bongo_mart/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'features/authentication/password_configaration/reset_password.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -10,11 +12,13 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.system,
-      theme: TAppTheme.lightTheme,
-      darkTheme: TAppTheme.darkTheme,
-      home: const ResetPassword(),
+        title: TTexts.appName,
+        themeMode: ThemeMode.system,
+        theme: TAppTheme.lightTheme,
+        darkTheme: TAppTheme.darkTheme,
+        debugShowCheckedModeBanner: false,
+        // initialBinding: GeneralBindings(),
+        home: const OnBoardingScreen()
     );
   }
 }
