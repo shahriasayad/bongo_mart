@@ -3,6 +3,7 @@ import 'package:bongo_mart/utils/constants/text_strings.dart';
 import 'package:bongo_mart/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'features/shop/screens/home.dart';
 import 'navigation_menu.dart';
 
 class App extends StatelessWidget {
@@ -17,7 +18,7 @@ class App extends StatelessWidget {
         darkTheme: TAppTheme.darkTheme,
         debugShowCheckedModeBanner: false,
         // initialBinding: GeneralBindings(),
-        home: const NavigationMenu()
+        home: const HomeScreen()
     );
   }
 }
