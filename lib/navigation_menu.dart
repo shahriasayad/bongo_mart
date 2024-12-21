@@ -1,5 +1,5 @@
-import 'package:bongo_mart/features/shop/screens/home.dart';
 import 'package:bongo_mart/features/shop/screens/home/home.dart';
+import 'package:bongo_mart/features/shop/screens/store/store.dart';
 import 'package:bongo_mart/utils/constants/colors.dart';
 import 'package:bongo_mart/utils/helpers/helper_functions.dart';
 import 'package:bongo_mart/utils/local_storage/storage_utility.dart';
@@ -44,7 +44,7 @@ class NavigationController extends GetxController {
 
   final screen = [
     const HomeScreen(),
-    Container(color: Colors.purple),
+    const StoreScreen(),
     Container(color: Colors.orange),
     Container(color: Colors.blue),
   ];

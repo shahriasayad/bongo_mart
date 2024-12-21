@@ -1,5 +1,5 @@
 import 'package:bongo_mart/common/widgets/appbar/appbar.dart';
-import 'package:bongo_mart/common/widgets/products_cart/cart_counter_icon.dart';
+import 'package:bongo_mart/common/widgets/products/products_cart/cart_counter_icon.dart';
 import 'package:bongo_mart/utils/constants/colors.dart';
 import 'package:bongo_mart/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';

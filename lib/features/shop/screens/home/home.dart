@@ -4,12 +4,14 @@ import 'package:bongo_mart/common/widgets/custom_shapes/containers/primary_heade
 import 'package:bongo_mart/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:bongo_mart/common/widgets/image_text_widgets/vertical_image_text.dart';
 import 'package:bongo_mart/common/widgets/images/rounded_image.dart';
-import 'package:bongo_mart/common/widgets/products_cart/cart_counter_icon.dart';
+import 'package:bongo_mart/common/widgets/layouts/grid_layout.dart';
+import 'package:bongo_mart/common/widgets/products/products_card/product_card_vertical.dart';
 import 'package:bongo_mart/common/widgets/texts/section_header.dart';
 import 'package:bongo_mart/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:bongo_mart/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:bongo_mart/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:bongo_mart/utils/constants/colors.dart';
+import 'package:bongo_mart/utils/constants/enums.dart';
 import 'package:bongo_mart/utils/constants/image_strings.dart';
 import 'package:bongo_mart/utils/constants/sizes.dart';
 import 'package:bongo_mart/utils/constants/text_strings.dart';
@@ -35,9 +37,7 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   HomeAppBar(),
                   SizedBox(height: TSizes.spaceBtwSections),
-                  SearchContainer(
-                    text: "Search in Store",
-                  ),
+                  SearchContainer(text: "Search in Store"),
                   SizedBox(height: TSizes.spaceBtwSections),
                   Padding(
                     padding: EdgeInsets.only(left: TSizes.defaultSpace),
@@ -57,7 +57,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(TSizes.defaultSpace),
+              padding: const EdgeInsets.all(0),
               child: Column(
                 children: [
                   PromoSlider(
@@ -67,6 +67,15 @@ class HomeScreen extends StatelessWidget {
                       TImages.promoBanner3,
                     ],
                   ),
+                  const SizedBox(height: TSizes.spaceBtwItems),
+                  SectionHeader(
+                    title: "Popular Products",
+                    onPressed: () {},
+                  ),
+                  const SizedBox(height: TSizes.spaceBtwItems),
+                  GridLayout(
+                      itemCount: 8,
+                      itemBuilder: (_, index) => const ProductCardVertical()),
                 ],
               ),
             ),
