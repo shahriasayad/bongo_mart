@@ -1,5 +1,6 @@
 import 'package:bongo_mart/features/authentication/screens/onboarding/onboarding.dart';
 import 'package:bongo_mart/features/shop/screens/store/store.dart';
+import 'package:bongo_mart/features/shop/screens/wishlist/wishlist.dart';
 import 'package:bongo_mart/utils/constants/text_strings.dart';
 import 'package:bongo_mart/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,6 @@ class App extends StatelessWidget {
         theme: TAppTheme.lightTheme,
         darkTheme: TAppTheme.darkTheme,
         debugShowCheckedModeBanner: false,
-        home: const StoreScreen());
+        home: const WishListScreen());
   }
 }
