@@ -13,16 +13,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-  # Utility Packages
-  http: ^1.2.1
-  intl: ^0.19.0
-  logger: ^2.2.0
-  url_launcher: ^6.2.6
-  flutter_native_splash: ^2.4.0
-  smooth_page_indicator: ^1.1.0
-  connectivity_plus: ^6.0.3
-  lottie: ^3.1.0 # OR RIVE
+  get: ^4.6.5
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path_provider: ^2.0.11
+dev_dependencies:
+  hive_generator: ^2.0.0
+  build_runner: ^2.4.6
 
   # Icons
   iconsax: ^0.0.8

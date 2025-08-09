@@ -1,5 +1,6 @@
 import 'package:bongo_mart/common/widgets/appbar/appbar.dart';
 import 'package:bongo_mart/common/widgets/custom_shapes/containers/primary_header_container.dart';
+import 'package:bongo_mart/common/widgets/list_tile/settings_menu_tile.dart';
 import 'package:bongo_mart/common/widgets/texts/section_heading.dart';
 import 'package:bongo_mart/features/authentication/screens/login/login.dart';
 import 'package:bongo_mart/navigation_menu.dart';
@@ -21,7 +22,6 @@ class SettingsScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            //-------------Header-------------//
             PrimaryHeaderContainer(
               child: Column(
                 children: [
@@ -37,9 +37,7 @@ class SettingsScreen extends StatelessWidget {
                   SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
-                  //-------------Profile Setup-------------//
-
-                  MyUserProfile(),
+                  UserProfile(),
                   SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
@@ -47,7 +45,6 @@ class SettingsScreen extends StatelessWidget {
               ),
             ),
 
-            //-------------Body-------------//
             Padding(
               padding: EdgeInsets.all(TSizes.defaultSpace),
               child: Column(

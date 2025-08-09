@@ -1,3 +1,5 @@
+import 'package:bongo_mart/common/widgets/images/circular_image.dart';
+
 import '../../../utils/constants/colors.dart';
 import '../../../utils/constants/image_strings.dart';
 import '../../../utils/helpers/helper_functions.dart';
@@ -5,8 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
-class MyUserProfile extends StatelessWidget {
-  const MyUserProfile({
+class UserProfile extends StatelessWidget {
+  const UserProfile({
     super.key,
   });
 
@@ -14,7 +16,7 @@ class MyUserProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     final isDark = THelperFunctions.isDarkMode(context);
     return ListTile(
-      leading: MyCircularImage(
+      leading: CircularImage(
         isDark: isDark,
         padding: EdgeInsets.zero,
         width: 50,
