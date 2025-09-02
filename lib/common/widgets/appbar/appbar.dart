@@ -1,18 +1,21 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'package:bongo_mart/utils/constants/colors.dart';
 import 'package:bongo_mart/utils/constants/sizes.dart';
 import 'package:bongo_mart/utils/device/device_utility.dart';
+import 'package:bongo_mart/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const MyAppBar({
-    super.key,
-    this.title,
-    this.showBackArrow = false,
-    this.leadingIcon,
-    this.actions,
-    this.leadingOnPressed,
-  });
+  const MyAppBar(
+      {super.key,
+      this.title,
+      this.showBackArrow = false,
+      this.leadingIcon,
+      this.actions,
+      this.leadingOnPressed});
 
   final Widget? title;
   final bool showBackArrow;
@@ -22,17 +25,17 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = THelperFunctions.isDarkMode(context);
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: TSizes.md),
+      padding: EdgeInsets.symmetric(horizontal: TSizes.md),
       child: AppBar(
         automaticallyImplyLeading: false,
         leading: showBackArrow
             ? IconButton(
-                onPressed: () => Get.back(),
-                icon: const Icon(Iconsax.arrow_left))
+                onPressed: () => Get.back(), icon: Icon(Icons.arrow_back_ios_new, color: isDark ? TColors.white : TColors.black,))
             : leadingIcon != null
                 ? IconButton(
-                    onPressed: leadingOnPressed, icon: Icon(leadingIcon))
+                    onPressed: leadingOnPressed, icon: Icon(leadingIcon, color: isDark ? TColors.white : TColors.black,))
                 : null,
         title: title,
         actions: actions,
@@ -41,5 +44,6 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
+  // TODO: implement preferredSize
   Size get preferredSize => Size.fromHeight(TDeviceUtils.getAppBarHeight());
 }

@@ -1,6 +1,9 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:bongo_mart/common/widgets/appbar/appbar.dart';
-import 'package:bongo_mart/common/widgets/layouts/grid_layout.dart';
-import 'package:bongo_mart/common/widgets/texts/section_heading.dart';
+import 'package:bongo_mart/common/widgets/layout/grid_layout.dart';
+import 'package:bongo_mart/common/widgets/text/section_heading.dart';
+import 'package:bongo_mart/features/shop/screens/all_products/all_products.dart';
 import 'package:bongo_mart/features/shop/screens/brand/brand_products.dart';
 import 'package:bongo_mart/features/shop/screens/store/widgets/brand_card.dart';
 import 'package:bongo_mart/utils/constants/sizes.dart';
@@ -22,12 +25,12 @@ class AllBrandScreen extends StatelessWidget {
           padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             children: [
-              SectionHeading(title: 'Brands'),
+              MySectionHeading(title: 'Brands'),
               SizedBox(height: TSizes.spaceBtwItems),
-              GridLayout(
+              MyGridLayout(    
                 itemCount: 20,
                 mainAxisExtent: 100,
-                itemBuilder: (_, index) => BrandCard(
+                itemBuilder: (_, index) => MyBrandCard(
                   onTap: () {
                     Get.to(() => BrandProducts());
                   },

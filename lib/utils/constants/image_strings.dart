@@ -5,8 +5,8 @@
 class TImages {
 
   // -- App Logos
-  static const String darkAppLogo = "assets/logos/t-store-splash-logo-black.png";
-  static const String lightAppLogo = "assets/logos/t-store-splash-logo-white.png";
+  static const String darkAppLogo = "assets/logos/bongo-mart-logo-dark.png";
+  static const String lightAppLogo = "assets/logos/bongo-mart-logo-light.png";
 
   // -- Social Logos
   static const String google = "assets/logos/google-icon.png";
@@ -158,6 +158,8 @@ class TImages {
   static const String creditCard = "assets/icons/payment_methods/credit-card.png";
   static const String masterCard = "assets/icons/payment_methods/master-card.png";
   static const String paypal = "assets/icons/payment_methods/paypal.png";
+  static const String bkash = "assets/icons/payment_methods/bkash.png";
+  static const String nagad = "assets/icons/payment_methods/nagad.png";
   static const String visa = "assets/icons/payment_methods/visa.png";
   static const String paystack = "assets/icons/payment_methods/paystack.png";
   static const String paytm = "assets/icons/payment_methods/paytm.png";

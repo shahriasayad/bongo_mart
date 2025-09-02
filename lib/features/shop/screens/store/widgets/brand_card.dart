@@ -1,6 +1,6 @@
-import 'package:bongo_mart/common/widgets/custom_shapes/containers/rounded_container.dart';
-import 'package:bongo_mart/common/widgets/icons/brand_title_with_verified_icon.dart';
-import 'package:bongo_mart/common/widgets/images/circular_image.dart';
+import '../../../../../common/style/rounded_container.dart';
+import '../../../../../common/widgets/icons/brand_title_with_verified_icon.dart';
+import '../../../../../common/widgets/images/my_circular_Image.dart';
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/enums.dart';
 import '../../../../../utils/constants/image_strings.dart';
@@ -8,8 +8,8 @@ import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
-class BrandCard extends StatelessWidget {
-  const BrandCard({
+class MyBrandCard extends StatelessWidget {
+  const MyBrandCard({
     super.key,
     this.onTap,
     this.showBorder = true,
@@ -23,7 +23,7 @@ class BrandCard extends StatelessWidget {
     final isDark = THelperFunctions.isDarkMode(context);
     return GestureDetector(
       onTap: onTap,
-      child: RoundedContainer(
+      child: MyRoundedContainer(
         padding: const EdgeInsets.all(TSizes.sm),
         showBorder: showBorder,
         backgroundColor: Colors.transparent,
@@ -31,8 +31,9 @@ class BrandCard extends StatelessWidget {
           children: [
             //Icon
             Flexible(
-              child: CircularImage(
-                image: TImages.clothIcon,
+              child: MyCircularImage(
+                isDark: isDark,
+                imageUrl: TImages.clothIcon,
                 backgroundColor: Colors.transparent,
                 overlayColor: isDark ? TColors.white : TColors.dark,
               ),
@@ -44,7 +45,7 @@ class BrandCard extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const BrandTitleWithVerifiedIcon(
+                  const MyBrandTitleWithVerifiedIcon(
                     title: 'Nike',
                     brandTitleSize: TextSizes.large,
                   ),

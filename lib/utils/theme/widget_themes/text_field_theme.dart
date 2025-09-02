@@ -1,5 +1,5 @@
+import '../../constants/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:bongo_mart/utils/constants/colors.dart';
 import '../../constants/sizes.dart';
 
 class TTextFormFieldTheme {

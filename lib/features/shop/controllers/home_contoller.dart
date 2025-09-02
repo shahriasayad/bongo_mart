@@ -4,7 +4,8 @@ class HomeController extends GetxController {
   static HomeController get instance => Get.find();
   final carousalCurrentIndex = 0.obs;
 
-  void updatePageIndicator(index) {
+
+  void updateCarouselIndex(int index) {
     carousalCurrentIndex.value = index;
   }
 }
