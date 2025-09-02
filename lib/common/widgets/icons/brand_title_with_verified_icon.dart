@@ -1,12 +1,12 @@
-import 'package:bongo_mart/common/widgets/texts/brand_title_text.dart';
+import '../text/brand_title_text.dart';
 import '../../../utils/constants/colors.dart';
 import '../../../utils/constants/enums.dart';
 import '../../../utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
-class BrandTitleWithVerifiedIcon extends StatelessWidget {
-  const BrandTitleWithVerifiedIcon({
+class MyBrandTitleWithVerifiedIcon extends StatelessWidget {
+  const MyBrandTitleWithVerifiedIcon({
     super.key,
     required this.title,
     this.maxLines = 1,
@@ -28,14 +28,13 @@ class BrandTitleWithVerifiedIcon extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         Flexible(
-          child: BrandTitleText(
-            title: title,
-            textColor: textColor,
-            brandTitleSize: brandTitleSize,
-            maxLines: maxLines,
-            textAlign: textAlign,
-          ),
-        ),
+            child: MyBrandTitleText(
+          title: title,
+          textColor: textColor,
+          brandTitleSize: brandTitleSize,
+          maxLines: maxLines,
+          textAlign: textAlign,
+        )),
         const SizedBox(width: TSizes.xs),
         Icon(
           Iconsax.verify5,
