@@ -1,11 +1,10 @@
-import 'package:bongo_mart/utils/constants/colors.dart';
-import 'package:bongo_mart/utils/constants/sizes.dart';
-import 'package:bongo_mart/utils/helpers/helper_functions.dart';
+import '../../../utils/constants/colors.dart';
+import '../../../utils/constants/sizes.dart';
+import '../../../utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 
-class CircularFavoriteIcon extends StatelessWidget {
-  const CircularFavoriteIcon({
+class MyCircularFavoriteIcon extends StatelessWidget {
+  const MyCircularFavoriteIcon({
     super.key,
     this.width,
     this.height,
@@ -29,19 +28,21 @@ class CircularFavoriteIcon extends StatelessWidget {
       width: width,
       height: height,
       decoration: BoxDecoration(
-          color: backgroundColor != null
-              ? backgroundColor!
-              : THelperFunctions.isDarkMode(context)
-                  ? TColors.black.withOpacity(0.0)
-                  : TColors.white.withOpacity(0.9),
-          borderRadius: BorderRadius.circular(100)),
-      child: IconButton(
-        onPressed: onPressed,
-        icon: Icon(
-          icon,
-          size: size,
-          color: color,
-        ),
+        borderRadius: BorderRadius.circular(100),
+        color: backgroundColor != null
+            ? backgroundColor!
+            : isDark
+                ? TColors.secondary.withOpacity(0.2)
+                : TColors.light.withOpacity(0.2),
+      ),
+      child: Center(
+        child: IconButton(
+            onPressed: onPressed,
+            icon: Icon(
+              icon,
+              size: size,
+              color: color,
+            )),
       ),
     );
   }

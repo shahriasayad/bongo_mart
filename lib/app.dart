@@ -1,11 +1,11 @@
-import 'package:bongo_mart/features/authentication/screens/onboarding/onboarding.dart';
-import 'package:bongo_mart/features/shop/screens/store/store.dart';
-import 'package:bongo_mart/features/shop/screens/wishlist/wishlist.dart';
-import 'package:bongo_mart/utils/constants/text_strings.dart';
-import 'package:bongo_mart/utils/theme/theme.dart';
+import 'package:bongo_mart/features/authentication/screens/login/login.dart';
+import 'package:bongo_mart/features/shop/screens/sub_category/sub_category.dart';
+
+import 'navigation_menu.dart';
+import 'utils/constants/text_strings.dart';
+import 'utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'navigation_menu.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -18,6 +18,7 @@ class App extends StatelessWidget {
         theme: TAppTheme.lightTheme,
         darkTheme: TAppTheme.darkTheme,
         debugShowCheckedModeBanner: false,
-        home: const WishListScreen());
+        // initialBinding: GeneralBindings(),
+        home: const LoginScreen());
   }
 }

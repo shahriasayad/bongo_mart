@@ -1,12 +1,12 @@
-import 'package:bongo_mart/common/widgets/custom_shapes/containers/rounded_container.dart';
+import '../../../../../common/style/rounded_container.dart';
 import 'brand_card.dart';
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
-class BrandShowcase extends StatelessWidget {
-  const BrandShowcase({
+class MyBrandShowcase extends StatelessWidget {
+  const MyBrandShowcase({
     super.key,
     required this.productImages,
   });
@@ -16,7 +16,7 @@ class BrandShowcase extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDark = THelperFunctions.isDarkMode(context);
-    return RoundedContainer(
+    return MyRoundedContainer(
       padding: const EdgeInsets.all(TSizes.md),
       showBorder: true,
       borderColor: TColors.darkGrey,
@@ -25,10 +25,11 @@ class BrandShowcase extends StatelessWidget {
       child: Column(
         children: [
           //Brand with Products Count
-          const BrandCard(
+          const MyBrandCard(
             showBorder: false,
           ),
 
+          //Brand Top 3 Products
           const SizedBox(height: TSizes.spaceBtwItems),
           Row(
             children: productImages
@@ -44,7 +45,7 @@ class BrandShowcase extends StatelessWidget {
 Widget brandTopProductImageWidget(String image, context) {
   final isDark = THelperFunctions.isDarkMode(context);
   return Expanded(
-    child: RoundedContainer(
+    child: MyRoundedContainer(
       height: 100,
       padding: const EdgeInsets.all(TSizes.md),
       backgroundColor: isDark ? TColors.darkerGrey : TColors.light,

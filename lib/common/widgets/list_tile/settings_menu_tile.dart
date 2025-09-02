@@ -2,8 +2,8 @@ import '../../../utils/constants/colors.dart';
 import '../../../utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
-class SettingsMenuTile extends StatelessWidget {
-  const SettingsMenuTile(
+class MySettingsMenuTile extends StatelessWidget {
+  const MySettingsMenuTile(
       {super.key,
       required this.icon,
       required this.title,

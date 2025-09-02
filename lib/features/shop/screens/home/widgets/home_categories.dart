@@ -1,26 +1,30 @@
-import 'package:bongo_mart/common/widgets/image_text_widgets/vertical_image_text.dart';
-import 'package:bongo_mart/utils/constants/image_strings.dart';
+import 'package:bongo_mart/features/shop/screens/sub_category/sub_category.dart';
+import 'package:get/get.dart';
+
+import '../../../../../common/widgets/vertical_image_text/vertical_image_text.dart';
+import '../../../../../utils/constants/colors.dart';
+import '../../../../../utils/constants/image_strings.dart';
 import 'package:flutter/material.dart';
 
-class HomeCategories extends StatelessWidget {
-  const HomeCategories({
+class MyHomeCategories extends StatelessWidget {
+  const MyHomeCategories({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 80,
+      height: 100,
       child: ListView.builder(
         shrinkWrap: true,
         itemCount: 6,
         scrollDirection: Axis.horizontal,
         itemBuilder: (_, index) {
-          return VerticalImageText(
-            image: TImages.shoeIcon,
-            title: 'Shoes',
-            onTap: () {},
-            textColor: Colors.white,
+          return MyVerticalImageText(
+            image: TImages.acerlogo,
+            title: "Shoes",
+            textColor: TColors.white, 
+            onPressed: () => Get.to(const SubCategoryScreen()),
           );
         },
       ),

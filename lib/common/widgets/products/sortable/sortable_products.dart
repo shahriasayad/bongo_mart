@@ -1,11 +1,12 @@
-import 'package:bongo_mart/common/widgets/layouts/grid_layout.dart';
-import 'package:bongo_mart/common/widgets/products/products_card/product_card_vertical.dart';
+
+import 'package:bongo_mart/common/widgets/layout/grid_layout.dart';
+import 'package:bongo_mart/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:bongo_mart/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
-class SortableProducts extends StatelessWidget {
-  const SortableProducts({
+class MySortableProducts extends StatelessWidget {
+  const MySortableProducts({
     super.key,
   });
 
@@ -39,17 +40,16 @@ class SortableProducts extends StatelessWidget {
             'Sale',
             'Newest',
             'Popularity'
-          ]
-              .map((String value) => DropdownMenuItem<String>(
+          ].map((String value) => DropdownMenuItem<String>(
                     value: value,
                     child: Text(value),
                   ))
               .toList(),
         ),
         SizedBox(height: TSizes.spaceBtwSections),
-        GridLayout(
+        MyGridLayout(
           itemCount: 10,
-          itemBuilder: (_, index) => ProductCardVertical(),
+          itemBuilder: (_, index) => MyProductCardVertical(),
         )
       ],
     );
